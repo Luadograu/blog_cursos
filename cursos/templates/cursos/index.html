@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog de Cursos</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center; /* Centraliza o texto em todo o corpo */
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto; /* Centraliza o contêiner e adiciona margem superior e inferior */
+            overflow: hidden;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: #fff;
+            margin: 10px auto; /* Centraliza o item da lista e adiciona margem superior e inferior */
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 80%; /* Define a largura dos itens da lista */
+            text-align: left; /* Centraliza o texto dentro do item da lista */
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Blog de Cursos</h1>
+        <nav>
+            <a href="{% url 'index' %}">Início</a>
+            <a href="{% url 'cursos' %}">Cursos</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Destaques dos Cursos</h2>
+        <ul>
+            <li><a href="{% url 'alimentos' %}">Curso de Alimentos</a></li>
+            <li><a href="{% url 'quimica' %}">Curso de Química</a></li>
+            <li><a href="{% url 'ads' %}">Curso de ADS</a></li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2024 Blog de Cursos. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

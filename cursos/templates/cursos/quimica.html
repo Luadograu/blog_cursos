@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Curso de Química</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center; /* Centraliza o texto no corpo */
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            width: 60%;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left; /* Alinha o texto dentro do main à esquerda */
+        }
+
+        main h2 {
+            text-align: center; /* Centraliza o título principal */
+        }
+
+        main p {
+            margin: 10px 0; /* Adiciona margem superior e inferior para os parágrafos */
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background: #555;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Curso de Química</h1>
+        <nav>
+            <a href="{% url 'index' %}">Início</a>
+            <a href="{% url 'cursos' %}">Cursos</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Descrição Completa</h2>
+        <p><strong>Objetivos:</strong> Fornecer uma compreensão abrangente dos princípios da Química, com foco em aplicações práticas e experimentos laboratoriais. O curso é projetado para preparar os alunos para atuar em ambientes acadêmicos e industriais.</p>
+        <p><strong>Conteúdo Programático:</strong> 
+            <ul>
+                <li>Fundamentos da Química</li>
+                <li>Química Orgânica e Inorgânica</li>
+                <li>Reações Químicas e Equilíbrios</li>
+                <li>Laboratório de Química</li>
+                <li>Aplicações da Química na Indústria</li>
+            </ul>
+        </p>
+        <p><strong>Pré-requisitos:</strong> Ensino médio completo com conhecimento básico em Ciências. Interesse em aprofundar-se em química e ciências experimentais.</p>
+        <p><strong>Duração:</strong> 8 semanas, com 4 horas de aula por semana.</p>
+        <p><strong>Certificação:</strong> Certificado de Conclusão emitido ao final do curso, com reconhecimento para atividades acadêmicas e profissionais na área de Química.</p>
+        <a href="#">Inscrição</a>
+    </main>
+    <footer>
+        <p>&copy; 2024 Blog de Cursos. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
