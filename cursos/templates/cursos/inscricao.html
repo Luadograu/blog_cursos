@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição de Cursos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+<!-- seu_app/templates/inscricao.html -->
+</head>
+<body>
+    <header>
+        <h1>Curso de Química</h1>
+        <nav>
+            <a href="{% url 'index' %}">Início</a>
+            <a href="{% url 'cursos' %}">Cursos</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Formulário de Inscrição</h2>
+        <form action="{% url 'inscricao' %}" method="post">
+            {% csrf_token %}
+            <form action="/enviar-inscricao" method="post">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+    
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+    
+                <label for="mensagem">Mensagem (opcional):</label>
+                <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+                <button type="submit">Enviar Inscrição</button>
+            </form>
+            {{ form.as_p }}
+            <button type="submit">Enviar Inscrição</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Blog de Cursos. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+
